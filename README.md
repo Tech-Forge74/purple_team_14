@@ -21,32 +21,96 @@ We propose developing SubSentry – an AI-powered Hidden Subscription Finder tha
 
 Your prototype must prioritize the functional implementation of **two selected features**. Other features may be represented through static UI elements and do not require functional implementation.
 
-### Feature 1: [Feature Name]
+### Feature 1: Smart Transaction Detection
 
-[Briefly elaborate on the feature, its purpose, and its expected functionality.]
+ Upload bank statements in PDF/CSV format.
 
-### Feature 2: [Feature Name]
+ Automatically detect OTT, Rapido, Namma Yatri, and other subscription-related transactions.
 
-[Briefly elaborate on the feature, its purpose, and its expected functionality.]
+ Categorize transactions based on service type.
+
+
+### Feature 2: Expense Analysis & Insights
+
+ Calculate total spending on each platform.
+
+ Display monthly expense breakdowns using charts.
+
+ Identify recurring subscriptions and highlight unnecessary spending.
 
 
 
 ## 4. Setup & Running Instructions
 
-[Provide clear, step-by-step instructions to install dependencies, configure the project if necessary, and run the prototype locally.]
+### Prerequisites
+Python 3.10+, Node.js 18+, and npm must be installed.
 
+### Clone the Repository
+```bash
+git clone <repository-url>
+cd hidden-subscription-finder
+```
 
+### Backend Setup
+```bash
+cd backend
+python -m venv venv
+```
+
+Activate the virtual environment:
+
+Windows:
+```bash
+venv\Scripts\activate
+```
+
+Install dependencies:
+```bash
+pip install fastapi uvicorn pymupdf pandas python-multipart pytesseract pillow
+```
+
+Start the backend:
+```bash
+uvicorn main:app --reload
+```
+
+### Frontend Setup
+
+Open a new terminal:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Access the application at `http://localhost:5173`.
+
+Backend API documentation is available at `http://127.0.0.1:8000/docs`.
+
+---
 
 ## 5. Feature Demonstration
 
-Provide step-by-step instructions for accessing and testing each of your two selected features.
+### Feature 1: Smart PDF Scanner
 
-### Feature 1: [Feature Name]
-1. [Steps to access the feature.]
-2. [Steps to test its functionality.]
-3. [Expected outcome.]
+1. Launch the application and navigate to the PDF upload section.
+2. Upload a bank statement in PDF format and initiate the extraction process.
+3. Review the extracted transaction details, including transaction dates, descriptions, debit amounts, credit amounts, and balances.
+4. Verify the extracted information and correct any inaccuracies if required.
+5. Export the extracted transactions as a CSV file.
 
-### Feature 2: [Feature Name]
-1. [Steps to access the feature.]
-2. [Steps to test its functionality.]
-3. [Expected outcome.]
+**Expected Outcome:** The system successfully extracts structured transaction data from bank statements, reducing manual data entry and making financial information easier to analyze.
+
+### Feature 2: Subscription Detection Engine
+
+1. Navigate to the subscription detection dashboard after extracting transactions.
+2. Initiate the subscription detection process on the extracted transaction data.
+3. Allow the system to analyze transaction frequency, merchant descriptions, payment amounts, and recurring patterns.
+4. Review detected subscriptions along with their frequency, estimated renewal dates, and confidence scores.
+5. Verify detected subscriptions and view estimated monthly and yearly subscription expenses.
+
+**Expected Outcome:** The system automatically identifies recurring payments and potential hidden subscriptions, providing users with better visibility into their subscription expenses and helping them identify unnecessary recurring payments.
+
+
+
+
