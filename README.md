@@ -1,7 +1,7 @@
 # PURPLE — Round 2 Submission
 
 ## 1. Team Name
-[Enter your team name]
+bugged out
 
 
 
@@ -9,11 +9,11 @@
 
 **Problem Statement:**
 
-[Describe the problem statement your team is addressing.]
+Users struggle to track their spending on OTT platforms, cab services, and other subscriptions. Our solution is a smart website that analyzes uploaded bank statements, automatically detects transactions from services like Netflix, Rapido, and Namma Yatri, and provides a clear breakdown of expenses to help users manage their money better.
 
 **Proposed Solution:**
 
-[Briefly explain your proposed solution and how it addresses the problem.]
+We propose developing SubSentry – an AI-powered Hidden Subscription Finder that automatically detects recurring payments from bank statements, identifies forgotten subscriptions, calculates unnecessary spending, and helps users manage or cancel subscriptions before they lose more money.
 
 
 
